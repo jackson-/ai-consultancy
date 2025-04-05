@@ -8,7 +8,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-bg.jpg"
+            src="/hero-bg.avif"
             alt="AI Technology Background"
             fill
             className="object-cover opacity-20"
@@ -38,16 +38,17 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                <div className="w-32 h-32 bg-blue-100 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <Image
                     src={service.icon}
                     alt={service.title}
-                    width={32}
-                    height={32}
+                    width={96}
+                    height={96}
+                    className="rounded-lg"
                   />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <h3 className="text-2xl font-semibold mb-4 text-center">{service.title}</h3>
+                <p className="text-gray-600 text-center">{service.description}</p>
               </div>
             ))}
           </div>
@@ -67,14 +68,6 @@ export default function Home() {
                 With years of experience in machine learning, natural language processing, and computer vision, we deliver cutting-edge AI solutions that drive real business value.
               </p>
             </div>
-            <div className="relative h-[400px]">
-              <Image
-                src="/about-image.jpg"
-                alt="Our Team"
-                fill
-                className="object-cover rounded-xl"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -86,16 +79,16 @@ const services = [
   {
     title: "AI Strategy & Consulting",
     description: "Develop comprehensive AI strategies aligned with your business goals and objectives.",
-    icon: "/strategy-icon.svg"
+    icon: "/ai-strategy-development.avif"
   },
   {
     title: "Machine Learning Solutions",
     description: "Build and deploy custom machine learning models to solve complex business problems.",
-    icon: "/ml-icon.svg"
+    icon: "/machine-learning-solutions.avif"
   },
   {
     title: "AI Integration",
     description: "Seamlessly integrate AI capabilities into your existing systems and workflows.",
-    icon: "/integration-icon.svg"
+    icon: "/ai-integration.avif"
   }
 ];
