@@ -6,7 +6,7 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI Consultancy | Transforming Business with AI",
+  title: "Grahamstak | Transforming Business with AI",
   description: "We help businesses leverage artificial intelligence to drive innovation, efficiency, and growth.",
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-20">
               <Link href="/" className="text-2xl font-bold text-blue-900">
-                AI Consultancy
+                Grahamstak
               </Link>
               <div className="hidden md:flex space-x-8">
                 <Link href="/services" className="text-gray-600 hover:text-blue-900">
@@ -43,7 +43,7 @@ export default function RootLayout({
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <h3 className="text-xl font-bold mb-4">AI Consultancy</h3>
+                <h3 className="text-xl font-bold mb-4">Grahamstak</h3>
                 <p className="text-gray-400">
                   Transforming businesses through artificial intelligence solutions.
                 </p>
@@ -78,7 +78,7 @@ export default function RootLayout({
               </div>
             </div>
             <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-              <p>&copy; {new Date().getFullYear()} AI Consultancy. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} Grahamstak. All rights reserved.</p>
             </div>
           </div>
         </footer>

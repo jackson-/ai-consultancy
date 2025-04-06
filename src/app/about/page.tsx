@@ -19,7 +19,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-gray-600 mb-6">
-                Founded in 2020, AI Consultancy emerged from a shared vision of making artificial intelligence accessible and valuable to businesses of all sizes. Our journey began with a small team of passionate AI experts who believed in the transformative power of machine learning and data science.
+                Founded in 2020, Grahamstak emerged from a shared vision of making artificial intelligence accessible and valuable to businesses of all sizes. Our journey began with a small team of passionate AI experts who believed in the transformative power of machine learning and data science.
               </p>
               <p className="text-gray-600 mb-6">
                 Today, we've grown into a leading AI consulting firm, helping organizations across various industries harness the power of AI to drive innovation, efficiency, and growth. Our team combines deep technical expertise with practical business acumen to deliver solutions that make a real impact.

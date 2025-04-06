@@ -12,7 +12,7 @@ export async function POST(request: Request) {
     console.log('Using Resend API key:', process.env.RESEND_API_KEY?.slice(0, 5) + '...');
 
     const data = await resend.emails.send({
-      from: 'AI Consultancy <onboarding@resend.dev>', // Use the default Resend sender for testing
+      from: 'Grahamstak <onboarding@resend.dev>',
       to: 'jackson.t.devin@gmail.com',
       subject: `New Contact Form Submission from ${name}`,
       text: `
