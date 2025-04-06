@@ -28,8 +28,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true, data });
   } catch (error) {
     console.error('Failed to send email:', error);
+    let errorMessage = 'Failed to send email';
+    
+    // Type check if error is an Error object
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+    
     return NextResponse.json(
-      { error: 'Failed to send email', details: error.message },
+      { error: 'Failed to send email', details: errorMessage },
       { status: 500 }
     );
   }

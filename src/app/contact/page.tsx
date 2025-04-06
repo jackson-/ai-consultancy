@@ -2,6 +2,12 @@
 
 import { useState, useEffect } from 'react';
 
+type StatusState = {
+  loading: boolean;
+  success: boolean;
+  error: string | null;
+};
+
 export default function Contact() {
   const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState({
@@ -10,7 +16,7 @@ export default function Contact() {
     company: '',
     message: '',
   });
-  const [status, setStatus] = useState({
+  const [status, setStatus] = useState<StatusState>({
     loading: false,
     success: false,
     error: null
@@ -46,7 +52,14 @@ export default function Contact() {
       }
     } catch (error) {
       console.error('Error sending message:', error);
-      setStatus({ loading: false, success: false, error: error.message });
+      let errorMessage = 'Failed to send message';
+      
+      // Type check if error is an Error object
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+      
+      setStatus({ loading: false, success: false, error: errorMessage });
     }
   };
 
